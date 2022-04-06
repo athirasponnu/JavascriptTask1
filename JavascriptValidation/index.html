@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form</title>
+        <script src="js/icons.js"></script>
+        <link href="css/style.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <form id="formSubmit" name="form">
+                <div class="feildDiv ">
+                    <label class="feild">Name</label><br>
+                    <input type="text" name="txt" id="name" placeholder="Enter your name">
+                    <i class="fa-solid fa-circle-exclamation" title="error"></i>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <p></p>
+                </div>
+                <div class="feildDiv ">
+                    <div class="feild">Email</div>
+                    <input type="email" name="email" id="email" placeholder="aathi@gmail.com" >
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <p></p>
+                </div>
+                <div class="feildDiv ">
+                    <div class="feild">Password</div>
+                    <input type="password" name="pswd" id="password" placeholder="Enter your Password">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <p></p>
+                </div>
+                <div class="feildDiv ">
+                    <div class="feild">Confirm Password</div>
+                    <input type="password" name="Confirm-pswd" id="confirmPassword" placeholder="Enter your Password">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <p></p>
+                </div>
+                <div class="feildDiv ">
+                    <div class="feild">Gender</div>
+                    <input type="radio" name="gender" id="gen1" value="male" class="selectclass">Male
+                    <input type="radio" name="gender" id="gen2" value="Female" class="selectclass">Female
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <p ></p>
+                </div>
+                <div class="feildDiv ">
+                    <div class="feild">Date Of Birth</div>
+                    <input type="date" name="dob" id="dob" >
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <p></p>
+                </div>
+                <div class="feildDiv ">
+                    <div class="feild">Occupation & Place of Employment</div>
+                    <textarea id="description"></textarea>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <p></p>
+                </div>
+                <div>
+                    <div class="feild">Country</div>
+                    <select id="sel">
+                        <option value="india">India</option>
+                        <option value="China">China</option>
+                        <option value="Russia">Russia</option>
+                    </select>
+                    <div class="feildDiv ">
+                        <div class="feild">Phone Number</div>
+                        <input type="tel" name="phonenumber" id="contactNum" >
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <p></p>
+                    </div>
+                    <div class="feildDiv ">
+                        <div class="feild">Qualification</div>
+                        <input type="checkbox" id="chk1" name="checkbox" value="BTech"class="selectclass" >BTech
+                        <input type="checkbox" id="chk2" name="checkbox" value="MTech" class="selectclass"  >MTech
+                        <input type="checkbox" id="chk1" name="checkbox" value="Others" class="selectclass"  >Others
+                        <div></div>
+                    </div>
+                    <div class="feildDiv ">
+                        <div class="feild">Photo</div>
+                        <input type="file" name="image" class="file-class" id="image" >
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <p></p>
+                    </div>
+                    <div>
+                        <button type="submit" value="submit">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <script src="js/script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,124 @@
+*
+{
+    box-sizing: border-box;
+}
+body
+{
+    padding:0;
+    margin:0;
+    font-family: sans-serif;
+}
+.container
+{
+    background-color: rgba(223, 226, 230, 0.884);
+    margin-left:30%;
+    margin-top:15px;
+    width:40%;
+    padding:30px;
+    padding-left:6%;
+    font-size:13px;
+    border-radius:5px;
+}
+input,textarea
+{
+    margin:10px 0px;
+    margin-bottom: 0px;
+    width:85%;
+    padding:10px;
+    border:none;
+    border-radius:5px;
+}
+select
+{
+    margin:10px 0px;
+    width:85%;
+    padding:10px ;
+    border:none;
+    border-radius:5px;
+}
+.feild
+{
+    margin-top:10px;
+}
+.feildDiv
+{
+   position:relative;
+}
+.feildDiv i
+{
+    position: absolute;
+    visibility: hidden;
+    left:77%;
+    top:37px;
+    font-size:16px;
+}
+.feildDiv p
+{
+    visibility: hidden;
+    /* position:absolute; */
+    left:0;
+    bottom:0;
+    top:0;
+}
+input:focus
+{
+    outline:none;
+}
+.feildDiv.success textarea
+{
+    border:2px solid green;
+}
+.feildDiv.success input
+{
+    border:2px solid green;
+}
+.feildDiv.success i.fa-circle-check
+{
+    visibility: visible;
+    color:green;
+}
+.feildDiv.error input
+{
+    border:2px solid red;
+}
+.feildDiv.error textarea
+{
+    border:2px solid red;
+}
+.feildDiv.error p
+{
+    visibility:visible;
+    color:red;
+}
+.feildDiv.error i.fa-circle-exclamation
+{
+    visibility: visible;
+    color:red;
+}
+textarea:focus
+{
+    outline:none;
+}
+.selectclass
+{
+    padding:0px;
+    margin-top:10px;
+    width:4%;
+    margin-left:5px;
+    margin-right:5px;
+}
+.file-class
+{
+    background-color: white;
+}
+button
+{
+ width:35%;
+ padding:10px;
+ background-color:rgb(15, 185, 38);
+ margin-left:25%;
+ margin-top:20px;
+ border: 1px solid rgb(15, 185, 38);
+ border-radius:3px;
+ color:white;
+}
