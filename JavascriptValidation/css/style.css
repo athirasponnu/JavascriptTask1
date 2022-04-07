@@ -19,7 +19,7 @@ body
     font-size:13px;
     border-radius:5px;
 }
-input,textarea
+input
 {
     margin:10px 0px;
     margin-bottom: 0px;
@@ -40,6 +40,11 @@ select
 {
     margin-top:10px;
 }
+#dob
+{
+    padding:10px 55px 10px 35px;
+    width:84%;
+}
 .feildDiv
 {
    position:relative;
@@ -55,12 +60,24 @@ select
 .feildDiv p
 {
     visibility: hidden;
-    /* position:absolute; */
     left:0;
     bottom:0;
     top:0;
 }
+textarea
+{
+    margin:10px 0px;
+    width:85%;
+    padding:10px ;
+    border:none;
+    border-radius:5px;
+}
+
 input:focus
+{
+    outline:none;
+}
+select:focus
 {
     outline:none;
 }
@@ -113,12 +130,12 @@ textarea:focus
 }
 button
 {
- width:35%;
- padding:10px;
- background-color:rgb(15, 185, 38);
- margin-left:25%;
- margin-top:20px;
- border: 1px solid rgb(15, 185, 38);
- border-radius:3px;
- color:white;
+    width:35%;
+    padding:10px;
+    background-color:rgb(15, 185, 38);
+    margin-left:25%;
+    margin-top:20px;
+    border: 1px solid rgb(15, 185, 38);
+    border-radius:3px;
+    color:white;
 }

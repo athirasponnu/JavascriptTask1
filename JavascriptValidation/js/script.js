@@ -7,9 +7,9 @@ let gender1=document.getElementById("gen1");
 let gender2=document.getElementById("gen2");
 let dob=document.getElementById("dob");
 let occupationDetails=document.getElementById("description");
-let checkbox=document.querySelectorAll("input[name=checkbox]");
-// // let chk2=document.getElementById("chk2");
-// // let chk3=document.getElementById("chk3");
+let chk1=document.getElementById("chk1");
+let chk2=document.getElementById("chk2");
+let chk3=document.getElementById("chk3");
 let contactNum=document.getElementById("contactNum");
 let inputFile=document.getElementById("image");
 form.addEventListener("submit",(e)=>{
@@ -22,10 +22,13 @@ email.addEventListener("blur",validateEmail);
 password.addEventListener("blur",validatePassword);
 confirmPassword.addEventListener("blur",validateCPassword);
 gender1.addEventListener("blur",validateGender);
+gender2.addEventListener("blur",validateGender);
 dob.addEventListener("blur",validatedob);
 occupationDetails.addEventListener("blur",validateOccupation);
 contactNum.addEventListener("blur",validatePhonenum);
-checkbox.addEventListener("change",validateCheckbox);
+chk1.addEventListener("blur",validateCheckbox);
+chk2.addEventListener("blur",validateCheckbox);
+chk3.addEventListener("blur",validateCheckbox);
 inputFile.addEventListener("blur",validateFile);
 function validateInputs()
 {
@@ -122,14 +125,14 @@ function validateCPassword()
 //gender validation
 function validateGender()
 {
-    // let genderValue=gender1.value;
-    if(gender1.checked==false && gender2.checked==false)
+    if(gender1.checked==false && gender2.checked==false )
     {
        error(gender1,"please select a gender");
     }
     else
     {
         success(gender1);
+       
     }
 }
 //dob validaion
@@ -184,14 +187,14 @@ function validatePhonenum()
 function validateCheckbox()
 {
     
-    if(checkbox.checked==false)
+    if(chk1.checked==false && chk2.checked==false && chk3.checked==false )
     {
-        error(checkbox,"Please select your Qualifications");
+        error(chk1,"Please select your Qualifications");
         
     }
     else
     {
-        success(checkbox);
+        success(chk1);
     }
 }
 // file validation
