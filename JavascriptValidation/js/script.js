@@ -15,7 +15,6 @@ let inputFile=document.getElementById("image");
 form.addEventListener("submit",(e)=>{
     e.preventDefault();
     validateInputs();
-   
 });
 username.addEventListener("blur",validateName);
 email.addEventListener("blur",validateEmail);
