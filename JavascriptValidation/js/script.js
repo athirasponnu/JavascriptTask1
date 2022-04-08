@@ -7,6 +7,7 @@ let gender1=document.getElementById("gen1");
 let gender2=document.getElementById("gen2");
 let dob=document.getElementById("dob");
 let occupationDetails=document.getElementById("description");
+let sel=document.getElementById("sel");
 let chk1=document.getElementById("chk1");
 let chk2=document.getElementById("chk2");
 let chk3=document.getElementById("chk3");
@@ -41,6 +42,7 @@ function validateInputs()
     validatePhonenum();
     validateCheckbox();
     validateFile();
+    validateSelect();
 }
 
 //Name validation
@@ -50,11 +52,11 @@ function validateName()
     let validName="^[a-zA-Z\s]+$";
     if(nameValue=="")
     {
-        error(username,"Username cannot be empty");
+        error(username,"* Username cannot be empty");
     }
     else if(!nameValue.match(validName))
     {
-        error(username,"Username cannot include numbers and special characters ");
+        error(username,"* Username cannot include numbers and special characters ");
     }
     else
     {
@@ -69,11 +71,11 @@ function validateEmail()
     let validEmail= /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     if(emailValue=="")
     {
-        error(email,"Email cannot be empty");   
+        error(email,"* Email cannot be empty");   
     }
     else if(!emailValue.match(validEmail))
     {
-        error(email,"Enter a valid email ");
+        error(email,"* Enter a valid email ");
     }
     else
     {
@@ -87,16 +89,16 @@ function validatePassword()
     let validPassword="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])";
     if(passwordValue=="")
     {
-        error(password,"Password cannot be empty");
+        error(password,"* Password cannot be empty");
         
     }
     else if(passwordValue.length<8)
     {
-        error(password,"Password must atleast contain 8 characters");   
+        error(password,"* Password must atleast contain 8 characters");   
     }
     else if(!passwordValue.match(validPassword))
     {
-        error(password,"Password should contain atleast one uppercase character, lowercase character,digit and special character");
+        error(password,"* Password should contain atleast one uppercase character, lowercase character,digit and special character");
     }
     else
     {
@@ -110,11 +112,11 @@ function validateCPassword()
     let confirmPasswordValue=confirmPassword.value.trim();
     if(confirmPasswordValue=="")
     {
-        error(confirmPassword,"Password cannot be empty");
+        error(confirmPassword,"* Password cannot be empty");
     }
     else if(confirmPasswordValue!=passwordValue)
     {
-        error(confirmPassword,"Password doesnot match");
+        error(confirmPassword,"* Password doesnot match");
     }
     else
     {
@@ -126,11 +128,11 @@ function validateGender()
 {
     if(gender1.checked==false && gender2.checked==false )
     {
-       error(gender1,"please select a gender");
+       document.getElementById("genderErr").innerHTML="* Please select a gender";
     }
     else
     {
-        success(gender1);
+        document.getElementById("genderErr").innerHTML="";
        
     }
 }
@@ -140,7 +142,7 @@ function validatedob()
     let dobValue=dob.value.trim();
     if(dobValue=="")
     {
-        error(dob,"Date of Birth feild cannot be empty");
+        error(dob," * Date of Birth feild cannot be empty");
     }
     else
     {
@@ -153,11 +155,11 @@ function validateOccupation()
     let occupationValue=occupationDetails.value.trim();
     if(occupationValue=="")
     {
-        error(occupationDetails,"Occupation details can't be empty");
+        error(occupationDetails,"* Occupation details can't be empty");
     }
     else if(occupationValue.length<10)
     {
-        error(occupationDetails,"Details must contain more than 10 characters ");
+        error(occupationDetails,"* Details must contain more than 10 characters ");
     }
     else
     {
@@ -171,11 +173,11 @@ function validatePhonenum()
     let validPhoneNum=/^\d{10}$/;
     if(contactValue=="")
     {
-        error(contactNum,"Phone number feild cannot be empty");
+        error(contactNum,"* Phone number feild cannot be empty");
     }
     else if(!contactValue.match(validPhoneNum))
     {
-        error(contactNum,"Enter a valid number");
+        error(contactNum,"* Enter a valid number");
     }
     else
     {
@@ -188,12 +190,12 @@ function validateCheckbox()
     
     if(chk1.checked==false && chk2.checked==false && chk3.checked==false )
     {
-        error(chk1,"Please select your Qualifications");
+        document.getElementById("checkboxErr").innerHTML="* Please select your qualification";
         
     }
     else
     {
-        success(chk1);
+        document.getElementById("checkboxErr").innerHTML=" ";
     }
 }
 // file validation
@@ -203,7 +205,7 @@ function validateFile()
     let validImageExtension=["jpeg","jpg"];
     if(inputFileValue=="")
     {
-        error(inputFile,"Please choose a  file");
+        error(inputFile,"* Please choose a  file");
     }
     else if(inputFileValue!="")
     {
@@ -212,7 +214,7 @@ function validateFile()
         let result=validImageExtension.includes(inputImageExtension);
         if(!result)
         {
-            error(inputFile,"Enter  a valid file");
+            error(inputFile,"* Enter  a valid file");
         }
         else
         {
@@ -222,6 +224,19 @@ function validateFile()
     else
     {
         success(inputFile);
+    }
+}
+function validateSelect()
+{
+   if(sel.value == "")
+    {
+      error(sel,"* Please select your Country");
+    //   document.getElementById("sel").focus(); 
+    }
+    else
+    {
+        document.getElementById("selectErr").innerHTML="";
+        success(sel);
     }
 }
 function error(input,message)
