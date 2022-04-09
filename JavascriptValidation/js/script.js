@@ -25,6 +25,7 @@ gender1.addEventListener("blur",validateGender);
 gender2.addEventListener("blur",validateGender);
 dob.addEventListener("blur",validatedob);
 occupationDetails.addEventListener("blur",validateOccupation);
+sel.addEventListener("blur",validateSelect);
 contactNum.addEventListener("blur",validatePhonenum);
 chk1.addEventListener("blur",validateCheckbox);
 chk2.addEventListener("blur",validateCheckbox);
