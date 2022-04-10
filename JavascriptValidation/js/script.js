@@ -69,7 +69,7 @@ function validateName()
 function validateEmail()
 {
     let emailValue=email.value.trim();
-    let validEmail= /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    let validEmail= /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     if(emailValue=="")
     {
         error(email,"* Email cannot be empty");   
