@@ -232,7 +232,6 @@ function validateSelect()
    if(sel.value == "")
     {
       error(sel,"* Please select your Country");
-    //   document.getElementById("sel").focus(); 
     }
     else
     {
@@ -244,7 +243,7 @@ function error(input,message)
 {
    let feildDiv=input.parentElement;
    let errorMsg=feildDiv.querySelector("p");
-   errorMsg.innerHTML=message;
+   errorMsg.innerText=message;
    feildDiv.className="feildDiv error";
 }
 function success(input)
